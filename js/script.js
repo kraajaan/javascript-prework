@@ -43,7 +43,7 @@
       else if (argComputerMove == argPlayerMove) {
         return rem;
       }
-    }
+    };
 
 
     const randomNumber = Math.floor(Math.random() * 3 + 1);
@@ -59,7 +59,7 @@
 
 
     printMessage(displayResult(computerMove, playerMove));
-  }
+  };
 
 
   document.getElementById('play-rock').addEventListener('click', function(){
