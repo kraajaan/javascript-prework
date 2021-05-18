@@ -12,10 +12,6 @@ function playGame(playerInput){
     else if(argMoveId == 3){
       return 'nożyce';
     }
-    else {
-      printMessage('Nie znam ruchu o id ' + argMoveId + '.');
-      return 'nieznany ruch';
-    }
   }
 
   function displayResult(argComputerMove, argPlayerMove){
@@ -42,9 +38,6 @@ function playGame(playerInput){
     }
     else if (argComputerMove == argPlayerMove) {
       return 'Remis!';
-    }
-    else if (argComputerMove == 'nieznany ruch' || argPlayerMove == 'nieznany ruch') {
-      return 'Nieznany wynik.';
     }
   }
 
