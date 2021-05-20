@@ -18,30 +18,30 @@
     const displayResult = function(argComputerMove, argPlayerMove){
 
       console.log('moves:', argComputerMove, argPlayerMove);
-      const wygr = 'Ty wygrywasz!',
-            przegr = 'Przegrywasz!',
-            rem = 'Remis.';
+      const win = 'Ty wygrywasz!',
+            lose = 'Przegrywasz!',
+            draw = 'Remis.';
 
       if(argComputerMove == 'kamień' && argPlayerMove == 'papier'){
-        return wygr;
+        return win;
       }
       else if (argComputerMove == 'kamień' && argPlayerMove == 'nożyce') {
-        return przegr;
+        return lose;
       }
       else if (argComputerMove == 'papier' && argPlayerMove == 'kamień') {
-        return przegr;
+        return lose;
       }
       else if (argComputerMove == 'papier' && argPlayerMove == 'nożyce') {
-        return wygr;
+        return win;
       }
       else if (argComputerMove == 'nożyce' && argPlayerMove == 'kamień') {
-        return wygr;
+        return win;
       }
       else if (argComputerMove == 'nożyce' && argPlayerMove == 'papier') {
-        return przegr;
+        return lose;
       }
       else if (argComputerMove == argPlayerMove) {
-        return rem;
+        return draw;
       }
     };
 
@@ -52,7 +52,6 @@
     printMessage('Mój ruch to: ' + computerMove);
 
 
-    //let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
     console.log('Gracz wpisał: ' + playerInput);
     const playerMove = getMoveName(playerInput);
     printMessage('Twój ruch to: ' + playerMove);
